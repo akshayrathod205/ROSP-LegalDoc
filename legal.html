@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Ff538jR+qbz8C3s5FbP5l/7bOJSUZpZzEdwzjyYVpGk8Hg7X6t/9bh6C1XjmdG5f5"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+      /* Custom CSS for the visible container */
+      .custom-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px; /* Rounded edges */
+        transition: transform 0.2s; /* Smooth transition on hover */
+        cursor: pointer; /* Add cursor pointer for clickability */
+      }
+
+      .head-con{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .head-con img{
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Hover effect for containers */
+      .custom-container:hover {
+        transform: scale(1.02); /* Scale up slightly on hover */
+      }
+
+      /* Custom CSS for headers */
+      h2 {
+        color: #333;
+      }
+
+      /* Custom CSS for "Description" */
+      .description {
+        font-size: 16px;
+        color: #666;
+        text-align: justify;
+        margin-top: 10px;
+      }
+
+      /* Custom CSS for "Learn More" links */
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      /* Remove underline on hover for "Learn More" links */
+      a:hover {
+        text-decoration: none;
+      }
+
+      /* Custom CSS for the custom header */
+      .custom-header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Custom CSS for the entire content area */
+      .main-content {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .skip{
+  width:15vw;
+  border-right: 0.2px solid #c2c0c1;
+  padding-top: 1vh;
+  text-align: center;
+}
+
+.icons{
+  width: 6vw;
+  text-align: center;
+  border-right: 0.2px solid #c2c0c1;
+}
+
+.lang{
+  width: 7vw;
+  text-align: center;
+  padding-top: 1vh;
+}
+
+.icons img{
+  width: 4vh;
+  height: 4vh;
+  padding-top: 0.5vh;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+    </style>
+    <title>Stylish Responsive Page</title>
+  </head>
+  <body>
+    <!-- Custom Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e5e2db;">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="font-size: 15px; color: black; border-right: 0.5px solid #c2c0c1; text-align: center; width: 20vw; margin-left: -3vw;">विधि और न्याय मंत्रालय, भारत सरकार</a>
+        <a class="navbar-brand" style="font-size: 15px; color: black; margin-left: -20vw;">Ministry of Law and Justice, Government of India</a>
+        <div class="content">
+          <h6 class="skip">Skip to Main Content</h6>
+        <div class="icons">
+          <a href="sitemap.html"><img src="images/sitemap.png"></a>
+        </div>
+        <div class="dropdown">
+          <img class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" src="images/wheelchair.png" style="width: 4vw; height: 5vh; background-color: #e5e2db; border: none; border-right: 0.2px solid #c2c0c1;">
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" value="1.8" href="#">A+</a></li>
+            <li><a class="dropdown-item" value="1" href="#">A</a></li>
+            <li><a class="dropdown-item" value="0.2"  href="#">A-</a></li>
+          </ul>
+          <div class="btn btn-secondary dropdown-toggle lang" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" src="images/wheelchair.png" style="width: 4vw; height: 5vh; background-color: #e5e2db; border: none; color: black;">English</div>
+          <div class="dropdown-menu" id="google_translate_element">
+            
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+  
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+            <img src="images/Ministry_of_Law_and_Justice.svg" alt="Bootstrap" width="200" height="100">
+            <img src="images/Insaaf.png" alt="Bootstrap" width="100" height="100" style="margin-left: 3vh;">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:39vh;">
+            <button class="btn" type="submit" style="background-color: #011F4A; color: white;">Search</button>
+          </form>
+  
+          <div class="buttons">
+            <a class="nav-link" href="#loginModal" data-toggle="modal"
+             style="background-color: #011F4A;
+            transition: 0.2s ease-in-out;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;">Login/Register</a>
+    
+             <!-- <button  href="#loginModal" data-toggle="modal">Log In</button> -->
+            <!-- <button>Register</button> -->
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <ul class="nav nav-tabs" style="justify-content: center;margin-top: 2vh; gap: 3vw;">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="homepage.html" style="font-size: 20px; color: #011F4A; font-weight: bold;">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="chatbot.html" style="font-size: 20px; color: black; font-weight: bold;">Chatbot</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="legal.html" style="font-size: 20px; color: black; font-weight: bold;" >Legal Framework</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="find-lawyer.html" style="font-size: 20px; color:black; font-weight: bold;" >Find a Lawyer</a>
+      </li>
+    </ul>
+
+    <!-- Container for the inside content -->
+    <div class="container mt-4 main-content">
+      <!-- Main Content Area -->
+      <div class="row" id="mainDiv">
+        <div class="col-md-6">
+          <a href="category.html?category=Labour">
+            <div class="custom-container">
+              <div class="head-con">
+              <h2>Labour Law</h2>
+              <img src="images/labour-law.png" alt="">
+            </div>
+              <p class="description">
+                Labor law in India governs the rights and responsibilities of
+                workers and employers, covering aspects such as wages, working
+                conditions, industrial disputes, and social security. It aims to
+                protect and regulate the labor force while promoting fair labor
+                practices and equitable treatment of employees.
+              </p>
+              <iframe
+                width="560"
+                height="263"
+                src="https://www.youtube.com/embed/QcVPILsV84Q?si=X3agk5apXAlALnhE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="category.html?category=Consumer">
+            <div class="custom-container">
+              <div class="head-con">
+                <h2>Consumer Law</h2>
+                <img src="images/consumer-protection.png" alt="">
+              </div>
+              <p class="description">
+                Consumer law in India is a legal framework designed to protect
+                the rights and interests of consumers, ensuring fair practices
+                by businesses and providing mechanisms for consumers to seek
+                redressal for product or service-related grievances. It
+                encompasses various acts and regulations, including the Consumer
+                Protection Act, aimed at promoting consumer welfare and holding
+                businesses accountable for their actions.
+              </p>
+              <iframe width="560" height="215" src="https://www.youtube.com/embed/2SIsEQZMs54?si=x2tvUA-5SwyILYuO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+2z5Oa1AZcbwN+8CA5F7h3Fp5z4Is5v5w6pW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- JavaScript to handle container click -->
+    <script>
+      // Function to handle container click
+      // function redirectToURL(url) {
+      //   window.location.href = url;
+      // }
+
+      // // Add click event listeners to the containers
+      // document
+      //   .querySelectorAll(".custom-container")
+      //   .forEach(function (container) {
+      //     container.addEventListener("click", function () {
+      //       var url = this.querySelector("a").getAttribute("href");
+      //       redirectToURL(url);
+      //     });
+      //   });
+
+      // const rowDOM = document.getElementById("mainDiv");
+
+      // const showCategories = async () => {
+      //   try {
+      //     const {
+      //       data: { categories },
+      //     } = await axios.get(`http://localhost:3002/api/v1/laws/categories`);
+      //     if (categories.length < 1) {
+      //       rowDOM.innerHTML = '<h5 class="empty-list">No Categories</h5>';
+      //       return;
+      //     }
+      //     const allCategories = categories
+      //       .map((category) => {
+      //         const { name, description, videoLink } = category;
+      //         return `<div class="col-md-6">
+      //     <a href="category.html?category=${name}">
+      //       <div class="custom-container">
+      //         <h2>${name}</h2>
+      //         <p class="description">${description}</p>
+      //       </div>
+      //     </a>
+      //   </div>`;
+      //       })
+      //       .join("");
+      //     rowDOM.innerHTML = allCategories;
+      //   } catch (error) {
+      //     console.log(error);
+      //     rowDOM.innerHTML =
+      //       '<h5 class="empty-list">There was an error, please try later....</h5>';
+      //   }
+      // };
+
+      // showCategories();
+    </script>
+  </body>
+</html>
