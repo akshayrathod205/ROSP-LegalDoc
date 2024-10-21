@@ -32,7 +32,7 @@ def get_pdf_text(pdf_docs):
                     text += pytesseract.image_to_string(img)
             else:
                 # If text-based, extract text directly
-                text += page.extract_text() or ''
+                text += page.extract_text()
     return text
 
 def get_text_chunks(text):
@@ -47,11 +47,14 @@ def build_vector_store(chunks):
 
 def get_conversational_chain():
     prompt_template = """
-    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in
-    provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+    You are a specialized legal assistant trained to handle legal questions. 
+    Your job is to provide clear, accurate, and concise legal advice strictly based on the context or question provided by the user. 
+    Your responses must be grounded in legal matters, such as laws, regulations, contracts, and legal principles. 
+    If the user’s question falls outside the legal domain or involves content not directly related to legal concerns, politely decline to answer, explaining that you only provide legal information.
+    Only respond to questions where you can give relevant legal insights, including references to applicable laws or principles when necessary.
+    Do not provide responses or interpretations of general documents or PDFs unless the question directly asks about a legal issue within them.\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
-
     Answer:
     """
     model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
@@ -68,17 +71,14 @@ def user_input(user_question, vector_store):
     )
     print(response)
     st.write("Reply: ", response["output_text"])
-
+    
 def main():
     st.set_page_config("Chat with PDF")
-    st.header("Chat with PDF using Gemini")
-
+    st.header("Chat with PDF using Gemini") 
     user_question = st.text_input("Ask a Question from the PDF Files")
-
     if 'vector_store' in st.session_state:
         if user_question:
             user_input(user_question, st.session_state['vector_store'])
-
     with st.sidebar:
         st.title("Menu:")
         pdf_docs = st.file_uploader("Upload your PDF Files and Click on the Submit & Process Button", accept_multiple_files=True)
@@ -89,6 +89,6 @@ def main():
                 vector_store = build_vector_store(text_chunks)
                 st.session_state['vector_store'] = vector_store
                 st.success("Done")
-
+                
 if __name__ == "__main__":
     main()
